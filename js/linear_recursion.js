@@ -1,5 +1,5 @@
 var Imperative = {
-	exponentiate: function (base, exponent) {
+	expt: function (base, exponent) {
 		var i = 0, result = 1;
 		
 		for (; i < exponent; i++) {
@@ -11,18 +11,22 @@ var Imperative = {
 };
  
 var Functional = {
-	exponentiate: function (base, exponent) {
-		return (exponent <= 0? 1 : (base * this.exponentiate(base, exponent - 1)));
+	expt: function (base, exponent) {
+		return (exponent? (base * this.expt(base, exponent - 1)) : 1);
 	}
 };
 
-print(Imperative.exponentiate(2, 4));
+print(Imperative.expt(2, 10));
 
 // (expt 2 4)
 // (* 2 (expt 2 3))
 // (* 2 (* 2 (expt 2 2)))
 // (* 2 (* 2 (* 2 (expt 2 1))))
-// (* 2 (* 2 (* 2 (2 * (expt 2 0)))))
-// (* 2 (* 2 (* 2 (2 * 1))))
+// (* 2 (* 2 (* 2 (* 2 (expt 2 0)))))
+// (* 2 (* 2 (* 2 (* 2 1))))
+// (* 2 (* 2 (* 2 2)))
+// (* 2 (* 2 4))
+// (* 2 8)
+// 16
 //
-print(Functional.exponentiate(2, 4));
+print(Functional.expt(2, 4));
