@@ -16,11 +16,13 @@ var Functional = {
 	}
 };
 
-// expt(2, 4)
-// (* 2 expt(2, 3))
-// (* 2 (* 2 expt(2, 2)))
-// (* 2 (* 2 (* 2 expt(2, 2))))
-// (* 2 (* 2 (* 2 (2 * expt(2, 1)))))
+print(Imperative.exponentiate(2, 4));
+
+// (expt 2 4)
+// (* 2 (expt 2 3))
+// (* 2 (* 2 (expt 2 2)))
+// (* 2 (* 2 (* 2 (expt 2 1))))
+// (* 2 (* 2 (* 2 (2 * (expt 2 0)))))
 // (* 2 (* 2 (* 2 (2 * 1))))
 //
 print(Functional.exponentiate(2, 4));
