@@ -9,7 +9,9 @@ var Imperative = {
 		return result;
 	}
 };
- 
+
+// LINEAR RECURSION
+//
 var Functional = {
 	expt: function (base, exponent) {
 		return (exponent? (base * this.expt(base, exponent - 1)) : 1);

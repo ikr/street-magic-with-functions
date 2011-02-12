@@ -1,3 +1,5 @@
+// LINEAR ITERATION
+//
 var exptIter = function (product, counter, base, exponent) {
 	return (
 		counter === exponent?
