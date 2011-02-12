@@ -14,3 +14,5 @@ Of all the contemporary mainstream languages JavaScript is probably the one most
 	* Imperative exponentiation
 	* Exponentiation via linear recursion
 	* Exponentiation via linear iteration
+	* Tree recursion for Fibonacci numbers
+	* Zero variables used
