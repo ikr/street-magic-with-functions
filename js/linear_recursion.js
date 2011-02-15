@@ -1,21 +1,21 @@
 var Imperative = {
-	expt: function (base, exponent) {
-		var i = 0, result = 1;
-		
-		for (; i < exponent; i++) {
-			result *= base;
-		}
-		
-		return result;
-	}
+    expt: function (base, exponent) {
+        var i = 0, result = 1;
+
+        for (; i < exponent; i++) {
+            result *= base;
+        }
+
+        return result;
+    }
 };
 
 // LINEAR RECURSION
 //
 var Functional = {
-	expt: function (base, exponent) {
-		return (exponent? (base * this.expt(base, exponent - 1)) : 1);
-	}
+    expt: function (base, exponent) {
+        return (exponent? (base * this.expt(base, exponent - 1)) : 1);
+    }
 };
 
 print(Imperative.expt(2, 10));
