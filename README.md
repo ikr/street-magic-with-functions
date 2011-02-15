@@ -1,6 +1,6 @@
 # Street magic with functions
 
-That's a talk I'm going to give at JSZurich on 22.02.2011.
+That's the talk I'm going to give at JSZurich on 22.02.2011.
 
 ## Abstract
 
