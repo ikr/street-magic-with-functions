@@ -52,6 +52,10 @@ var factorial3 = function (n) {
 // 
 // Y(f) = f(Y(f));
 
+// var Y = function (f) {
+//     return f(Y(f));
+// };
+
 var Y = function (f) {
     return f(
         function (n) {
