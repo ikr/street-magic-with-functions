@@ -12,5 +12,23 @@ var almost_factorial = function (f) {
     }
 };
 
+var identity = function (n) {
+    return n;
+};
+
+var factorial1 = function (n) {
+    return almost_factorial(identity)(n);
+}
+
+var factorial2 = function (n) {
+    return almost_factorial(factorial1)(n);
+}
+
+var factorial3 = function (n) {
+    return almost_factorial(factorial2)(n);
+}
+
 print(factorial(6));
 print(almost_factorial(magic_factorial)(6));
+print(almost_factorial(magic_factorial)(3));
+print(almost_factorial(factorial3)(3));
