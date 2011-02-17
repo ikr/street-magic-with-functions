@@ -92,3 +92,18 @@ var Y_combinator = make_recursive; // TADA!
 
 print(factorial(5));
 
+
+//--------------------------------------------------------------------------------------------------
+
+
+var almost_fib = function (f) {
+    return function (n) {
+        return (n < 2? n : f(n - 1) + f(n - 2));
+    };
+};
+
+var fib = function (n) {
+    return make_recursive(almost_fib)(n);
+}
+
+print(fib(10));
