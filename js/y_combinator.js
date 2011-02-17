@@ -86,7 +86,7 @@ var make_recursive = function (f) {
 
 var factorial = function (n) {
     return make_recursive(almost_factorial)(n);
-}
+};
 
 var Y_combinator = make_recursive; // TADA!
 
@@ -103,7 +103,7 @@ var almost_fib = function (f) {
 };
 
 var fib = function (n) {
-    return make_recursive(almost_fib)(n);
-}
+    return Y_combinator(almost_fib)(n);
+};
 
 print(fib(10));
