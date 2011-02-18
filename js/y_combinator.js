@@ -107,3 +107,17 @@ var fib = function (n) {
 };
 
 print(fib(10));
+
+//--------------------------------------------------------------------------------------------------
+
+var almost_expt2 = function (f) {
+    return function (exponent) {
+        return (exponent? (2 * f(exponent - 1)) : 1);
+    };
+};
+
+var expt2 = function (n) {
+    return Y_combinator(almost_expt2)(n);
+};
+
+print(expt2(10));
