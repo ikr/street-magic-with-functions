@@ -2,9 +2,9 @@ var magic_factorial = function (n) {
     return (n? n * magic_factorial(n - 1) : 1);
 };
 
-var factorial_callee = function (n) {
-    return (n? n * arguments.callee(n - 1) : 1);
-};
+// var factorial_callee = function (n) {
+//     return (n? n * arguments.callee(n - 1) : 1);
+// };
 
 var almost_factorial = function (f) {
     return function (n) {
