@@ -1,6 +1,4 @@
-// LINEAR ITERATION
-//
-var expt_iter = function (product, counter, base, exponent) {
+var expt_iter = function expt_iter (product, counter, base, exponent) {
     return (
         counter === exponent?
             product :
@@ -12,6 +10,8 @@ var expt = function (base, exponent) {
     return expt_iter(1, 0, base, exponent);
 };
 
+// LINEAR ITERATION
+//
 // (expt 2 4)
 // (expt-iter 1 0 2 4)
 // (expt-iter 2 1 2 4)

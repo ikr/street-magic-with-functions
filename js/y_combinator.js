@@ -1,4 +1,4 @@
-var magic_factorial = function (n) {
+var magic_factorial = function magic_factorial(n) {
     return (n? n * magic_factorial(n - 1) : 1);
 };
 
@@ -92,9 +92,7 @@ var Y_combinator = make_recursive; // TADA!
 
 print(factorial(5));
 
-
 //--------------------------------------------------------------------------------------------------
-
 
 var almost_fib = function (f) {
     return function (n) {

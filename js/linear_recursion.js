@@ -1,24 +1,20 @@
-var Imperative = {
-    expt: function (base, exponent) {
-        var i = 0, result = 1;
+function imperative_expt (base, exponent) {
+    var i = 0, result = 1;
 
-        for (; i < exponent; i++) {
-            result *= base;
-        }
-
-        return result;
+    for (; i < exponent; i++) {
+        result *= base;
     }
+
+    return result;
 };
+
+print(imperative_expt(2, 10));
 
 // LINEAR RECURSION
 //
-var Functional = {
-    expt: function (base, exponent) {
-        return (exponent? (base * this.expt(base, exponent - 1)) : 1);
-    }
-};
-
-print(Imperative.expt(2, 10));
+var functional_expt = function functional_expt (base, exponent) {
+    return (exponent? (base * functional_expt(base, exponent - 1)) : 1);
+}
 
 // (expt 2 4)
 // (* 2 (expt 2 3))
@@ -31,4 +27,4 @@ print(Imperative.expt(2, 10));
 // (* 2 8)
 // 16
 //
-print(Functional.expt(2, 4));
+print(functional_expt(2, 4));
