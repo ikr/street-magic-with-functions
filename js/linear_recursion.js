@@ -1,12 +1,12 @@
 function imperative_expt (base, exponent) {
     var i = 0, result = 1;
 
-    for (; i < exponent; i++) {
+    for (; i < exponent; ++i) {
         result *= base;
     }
 
     return result;
-};
+}
 
 print(imperative_expt(2, 10));
 
@@ -14,7 +14,7 @@ print(imperative_expt(2, 10));
 //
 var functional_expt = function functional_expt (base, exponent) {
     return (exponent? (base * functional_expt(base, exponent - 1)) : 1);
-}
+};
 
 // (expt 2 4)
 // (* 2 (expt 2 3))
